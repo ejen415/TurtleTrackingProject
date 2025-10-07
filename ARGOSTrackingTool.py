@@ -39,7 +39,7 @@ for lineString in line_list:
     obs_lat = lineData[6]
     obs_lon = lineData[7]
     #If statement for LC
-    if obs_lc is ("1", "2", "3"):
+    if obs_lc not in ("1", "2", "3"):
         #Add items to dicitonary
         date_dict[record_id] = obs_date
         loc_dict[record_id] = (obs_lat, obs_lon)
