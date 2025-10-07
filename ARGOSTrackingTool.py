@@ -8,6 +8,8 @@
 # Author: Eileen Jennings (eileen.jennings@duke.edu)
 # Date:   Fall 2025
 #-----------------------------
+#Ask user for date
+user_date = input("Enter a date: ")
 #Create a variable pointing to the data file
 file_name = './Data/raw/Sara_turtle.txt'
 
@@ -43,8 +45,22 @@ for lineString in line_list:
         #Add items to dicitonary
         date_dict[record_id] = obs_date
         loc_dict[record_id] = (obs_lat, obs_lon)
-    #Print the location of sara
-    #print(f"Record {record_id} indicates Sara was seen at lat:{obs_lat},lon:{obs_lon} on {obs_date}")
+    #Intialize Key List
+    key = []
+
+    #Loop through date_dict
+    
+
+
+
+
+
+
+
+
+
+#Print the location of sara
+#print(f"Record {record_id} indicates Sara was seen at lat:{obs_lat},lon:{obs_lon} on {obs_date}")
 
 
 
