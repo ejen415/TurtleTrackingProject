@@ -41,17 +41,24 @@ for lineString in line_list:
     obs_lat = lineData[6]
     obs_lon = lineData[7]
     #If statement for LC
-    if obs_lc not in ("1", "2", "3"):
+    if obs_lc in ("1", "2", "3"):
         #Add items to dicitonary
         date_dict[record_id] = obs_date
         loc_dict[record_id] = (obs_lat, obs_lon)
-    #Intialize Key List
-    key = []
+#Intialize Key List
+keys = []
 
-    #Loop through date_dict
-    
+#Loop through date_dict
+for key, value in date_dict.items():
+    if value == user_date:
+        keys.append(key)
 
-
+#Location for each key
+for key in keys:
+    location = loc_dict[key]
+    lat = location[0]
+    lng = location[1]
+    print(f'On {user_date}, Sara the turtle was seen at {lat}d Lat, {lng}d Lng.')
 
 
 
